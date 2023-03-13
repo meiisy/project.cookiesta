@@ -22,9 +22,9 @@
 
 body {
   font-family: "Caveat Brush", cursive;
-  background-color: var(--bg);
+  background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
-  min-height: 2000px;
+  min-height: 10000px;
 }
 
 /* Navbar */
@@ -33,7 +33,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 7%;
+  padding: 0.6rem 7%;
   background-color: rgba(0, 0, 0, 0.8);
   border-bottom: 1px solid var(--bg);
   position: fixed;
@@ -85,7 +85,7 @@ body {
 
 /* Hero Section */
 .hero {
-  min-height: 100vh;
+  min-height: 120vh;
   display: flex;
   align-items: center;
   background-image: url("../images/Cookiesta.png");
@@ -104,8 +104,8 @@ body {
   bottom: 0;
   background: linear-gradient(
     0deg,
-    rgb(157, 157, 163) 8%,
-    rgba(245, 244, 244, 0) 50%
+    rgb(255, 255, 255) 8%,
+    rgba(255, 255, 255, 0) 75%
   );
 }
 
@@ -174,8 +174,8 @@ body {
 }
 
 .about .row .content h3 {
-  margin-top: 2rem;
-  font-size: 4em;
+  margin-top: 1rem;
+  font-size: 3em;
   margin-bottom: 1rem;
   color: var(--primary);
 }
@@ -187,7 +187,7 @@ body {
 }
 
 .about .row .content p {
-  font-size: 2em;
+  font-size: 1.5em;
   margin-bottom: 0.8rem;
   color: var(--brown);
   font-weight: 50;
@@ -198,9 +198,15 @@ body {
   text-align: center;
   font-size: 3rem;
   margin-bottom: 2rem;
-  color: #c09900;
+  color: #ffffff;
 }
 
 .menu {
   padding: 8rem 7% 1.4rem;
+  background-image: url(../images/5.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  min-height: 150vh;
+  align-items: center;
 }
