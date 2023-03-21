@@ -143,18 +143,25 @@ body {
 .about {
   padding: 8rem 7% 1.4rem;
   background-color: var(--bg);
+  background-image: ;
 }
 
 .about h2 {
-  text-align: center;
+  text-align: right;
   font-size: 3rem;
   margin-bottom: 2rem;
   color: var(--darkbrown);
-  border-bottom: 1px solid var(--darkbrown);
+  text-decoration-line: underline;
 }
 
 .about .row {
   display: flex;
+  background-image: url("../images/bg3.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  width: 100vh;
 }
 
 .about .row .content {
@@ -317,7 +324,7 @@ body {
   text-align: center;
   align-items: center;
   justify-content: center;
-  border-radius: 20%;
+  border-radius: 3%;
   padding: 3rem;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   transition: 0.3s;
@@ -330,6 +337,14 @@ body {
   transform: translate(0px, -8px);
 }
 
+.testimoni .row .content .testi img {
+  width: 230px;
+  height: 50px;
+  border-radius: 0.5rem;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+}
 /* Contact */
 .contact {
   padding: 7rem 7% 1.4rem;
