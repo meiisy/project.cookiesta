@@ -202,7 +202,7 @@ body {
   width: 100%;
   justify-content: center;
   align-items: center;
-  padding: 3rem;
+  padding: 1rem;
 }
 
 .menu .gallery .row {
@@ -220,8 +220,8 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .menu .gallery .row .product .content {
@@ -301,30 +301,33 @@ body {
 }
 
 .testimoni .row {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.testimoni .row .content {
+  display: flex;
+  flex-wrap: wrap;
   margin: 1rem;
   box-sizing: border-box;
-  float: left;
   text-align: center;
-  border-radius: 10%;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20%;
   padding: 3rem;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   transition: 0.3s;
-  background: var(--cream);
-  width: 500px;
+  width: 430px;
+  height: 300px;
 }
 
-.testimoni .row:hover {
+.testimoni .row .content:hover {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   transform: translate(0px, -8px);
-}
-
-.testimoni .row .content {
-  font-size: 1.5rem;
-}
-.testimoni .row .cust {
-  margin-top: 1rem;
-  margin-bottom: 0.2rem;
-  color: var(--darkbrown);
 }
 
 /* Contact */
