@@ -153,11 +153,12 @@ body {
 }
 
 .about h2 {
-  text-align: right;
-  font-size: 3rem;
+  text-align: center;
+  font-size: 2.5rem;
   margin-bottom: 2rem;
   color: var(--darkbrown);
   text-decoration-line: underline;
+  text-align: right;
 }
 
 .about .row {
@@ -168,6 +169,7 @@ body {
   flex: 1 1 25rem;
   padding: 0 1rem;
   text-align: right;
+  text-align: right;
 }
 
 .about .row .content h3 {
@@ -177,12 +179,15 @@ body {
   color: var(--darkbrown);
   text-decoration-line: underline;
   text-align: right;
+  text-decoration-line: underline;
+  text-align: right;
 }
 
 .about .row .content h3 span {
   font-family: gistesy;
   padding: 1rem;
   font-size: 2rem;
+  text-align: right;
   text-align: right;
 }
 
@@ -193,11 +198,13 @@ body {
   font-weight: 50;
   line-height: 1.6;
   padding-left: 30rem;
+  padding-left: 30rem;
 }
 
 /* Menu Section */
 .menu {
   padding: 8rem 7% 1.4rem;
+  background-image: url("../images/menu2.png");
   background-image: url("../images/menu2.png");
 }
 
@@ -303,6 +310,7 @@ body {
 .testimoni {
   padding: 7rem 7% 1.4rem;
   min-height: 100vh;
+  background-image: url("../images/ts2.png");
   background-image: url("../images/ts2.png");
 }
 .testimoni h2 {
@@ -420,8 +428,8 @@ body {
 .contact .row {
   display: flex;
   margin-top: 2rem;
-  background-color: var(--cream);
   min-height: 20rem;
+  justify-content: right;
   justify-content: right;
 }
 
