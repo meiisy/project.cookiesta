@@ -143,14 +143,21 @@ body {
 .about {
   padding: 8rem 7% 1.4rem;
   background-color: var(--bg);
+  background-image: url("../images/bg10.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  width: 100%;
 }
 
 .about h2 {
   text-align: center;
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin-bottom: 2rem;
   color: var(--darkbrown);
-  border-bottom: 1px solid var(--darkbrown);
+  text-decoration-line: underline;
+  text-align: right;
 }
 
 .about .row {
@@ -160,6 +167,7 @@ body {
 .about .row .content {
   flex: 1 1 25rem;
   padding: 0 1rem;
+  text-align: right;
 }
 
 .about .row .content h3 {
@@ -167,12 +175,15 @@ body {
   font-size: 2rem;
   margin-bottom: 1rem;
   color: var(--darkbrown);
+  text-decoration-line: underline;
+  text-align: right;
 }
 
 .about .row .content h3 span {
   font-family: gistesy;
   padding: 1rem;
   font-size: 2rem;
+  text-align: right;
 }
 
 .about .row .content p {
@@ -181,11 +192,13 @@ body {
   color: var(--brown);
   font-weight: 50;
   line-height: 1.6;
+  padding-left: 30rem;
 }
 
 /* Menu Section */
 .menu {
   padding: 8rem 7% 1.4rem;
+  background-image: url("../images/menu2.png");
 }
 
 .menu h2 {
@@ -290,14 +303,73 @@ body {
 .testimoni {
   padding: 7rem 7% 1.4rem;
   min-height: 100vh;
+  background-image: url("../images/ts2.png");
 }
 .testimoni h2 {
   text-align: center;
   font-size: 3rem;
-  margin-bottom: 5rem;
+  margin-bottom: 1rem;
   margin-top: 1rem;
   color: var(--darkbrown);
   border-bottom: 1px solid var(--darkbrown);
+}
+
+.testimoni .row .content .testi {
+  display: flex;
+  width: 100%;
+  transition: 2s;
+}
+
+.testimoni .row .content .wrapper {
+  width: 300px;
+  margin: auto;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.testi img {
+  width: 100%;
+  min-width: 300px;
+  min-height: 280px;
+}
+#slide1:target ~ .testi {
+  margin-left: 0px;
+}
+
+#slide2:target ~ .testi {
+  margin-left: -100%;
+}
+
+#slide3:target ~ .testi {
+  margin-left: -200%;
+}
+
+#slide4:target ~ .testi {
+  margin-left: -300%;
+}
+
+.navigation a {
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  background-color: var(--brown);
+  font-size: 0px;
+  border-radius: 50%;
+}
+
+.navigation a:hover {
+  background-color: var(--darkbrown);
+  transition: 1s;
+}
+
+.navigation {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: var(--brown);
 }
 
 .testimoni .row {
@@ -307,22 +379,22 @@ body {
   width: 100%;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
+  padding-top: 3rem;
 }
+
 .testimoni .row .content {
   display: flex;
   flex-wrap: wrap;
-  margin: 1rem;
   box-sizing: border-box;
   text-align: center;
   align-items: center;
   justify-content: center;
-  border-radius: 20%;
-  padding: 3rem;
+  border-radius: 3%;
+  padding: 0;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   transition: 0.3s;
-  width: 430px;
-  height: 300px;
+  width: 400px;
+  height: 420px;
 }
 
 .testimoni .row .content:hover {
@@ -333,6 +405,7 @@ body {
 /* Contact */
 .contact {
   padding: 7rem 7% 1.4rem;
+  background-image: url("../images/cont.png");
 }
 .contact h2 {
   text-align: center;
@@ -346,52 +419,24 @@ body {
 .contact .row {
   display: flex;
   margin-top: 2rem;
-  background-color: var(--cream);
   min-height: 20rem;
+  justify-content: right;
 }
 
 .contact .row .map {
   flex: 0.5 0.5 25rem;
-  width: 70%;
-  object-fit: cover;
-  min-height: 20rem;
-  border: 2px solid var(--darkbrown);
+  max-width: 30%;
+  min-height: 18rem;
   box-sizing: border-box;
   margin: 2rem;
 }
 
-.contact .row form {
-  flex: 0.5 0.5 25rem;
-  padding: 0.5rem 2rem;
-  text-align: center;
-}
-
-.contact .row form .input-group {
-  display: flex;
-  align-items: center;
-  margin-top: 1.5rem;
-  background-color: var(--brown);
-  border: 2px solid var(--darkbrown);
-  padding-left: 2rem;
-  color: var(--darkbrown);
-}
-
-.contact .row form .input-group input {
-  width: 70%;
-  padding: 1.5rem;
-  font-size: 1rem;
-  background: none;
-  color: var(--bg);
-}
-
-.contact .row form .btn {
-  margin-top: 1.5rem;
-  display: inline-block;
-  padding: 1rem 3rem;
-  font-size: 1rem;
-  color: var(--bg);
-  background-color: var(--darkbrown);
-  cursor: pointer;
+.contact .ig {
+  margin-top: 2rem;
+  max-width: 30%;
+  min-height: 18rem;
+  margin: 2rem;
+  justify-content: center;
 }
 
 /* Footer */
