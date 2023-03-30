@@ -17,6 +17,12 @@
     <!--My Style Css-->
 
     <link rel="stylesheet" href="assets/css/style.css" />
+
+     <!-- Link Swiper's CSS -->
+     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+
+
   </head>
 
   <body>
@@ -55,7 +61,7 @@
         <div class="content">
           <p>Cookiesta is a home-based cake business since 2020 located in Pontianak by Rina and Chintya Natalie.</p> 
           <h3>Why Cookiesta?</h3>
-          <p>Made with quality materials and guaranteed cleanliness. It has a good taste at an affordable price.</p>
+          <p>Made with quality materials and guaranteed cleanliness. Good taste at an affordable price.</p>
           <h3>Order?</h3>
           <p>By Dm on Instagram or WhatsApp</p>
           <p>Made by order</p> 
@@ -162,38 +168,30 @@
 
     <!-- Menu Section End-->
 
-
     <!-- Testimoni Section Start -->
-    <section id="testimoni" class="testimoni">
+    <section id="testimoni" class="testimoni swiper mySwiper">
       <h2>Testimoni</h2>
-      <div class="row">
-        <div class="content">
-          <div class="wrapper">
-            <div class="slides">
-              <span id="slide1"></span>
-              <span id="slide2"></span>
-              <span id="slide3"></span>
-              <span id="slide4"></span>
-
-              <div class="testi">
-                <img src="assets/images/testi1.jpg"/>
-                <img src="assets/images/testi2.jpg"/>
-                <img src="assets/images/testi3.jpg"/>
-                <img src="assets/images/testi4.jpg"/>
-              </div>
-            </div>
-            <!-- Navigasi -->
-            <div class="navigation">
-              <a href ="#slide1">1</a>
-              <a href ="#slide2">2</a>
-              <a href ="#slide3">3</a>
-              <a href ="#slide4">4</a>
-        
-            </div>
-      
-          </div> 
+        <div class="wrapper swiper-wrapper">
+          <div class="slide swiper-slide">
+            <img src="assets/images/testi1.jpg" alt="" class="image">
+          </div>
+          <div class="slide swiper-slide">
+            <img src="assets/images/testi2.jpg" alt="" class="image">
+          </div>
+          <div class="slide swiper-slide">
+            <img src="assets/images/testi3.jpg" alt="" class="image">
+          </div>
+          <div class="slide swiper-slide">
+            <img src="assets/images/testi4.jpg" alt="" class="image">
+          </div>
         </div>
-      </div>
+
+        <div class="swiper-button-next nav-btn" ></div>
+        <div class="swiper-button-prev nav-btn"></div>
+        <div class="swiper-pagination"></div>
+
+    
+          
     </section>
 
 
@@ -248,6 +246,7 @@
     <!-- Feather Icons-->
 
     <script>
+      
       feather.replace();
       function wa_link(angka) {
         if (angka ==1) {
@@ -303,5 +302,24 @@
         
       }
     </script>
+
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+   
   </body>
 </html>
