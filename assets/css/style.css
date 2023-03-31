@@ -14,7 +14,7 @@
 
 @font-face {
   font-family: fontmenu;
-  src: url(../font/fontmenu.ttf);
+  src: url(../font/EduNSWACTFoundation-VariableFont_wght.ttf);
 }
 
 * {
@@ -222,7 +222,7 @@ body {
   width: 100%;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
+  padding: 0.5rem;
 }
 
 .menu .gallery .row {
@@ -320,99 +320,68 @@ body {
   text-align: center;
   font-size: 3rem;
   margin-bottom: 1rem;
-  margin-top: 1rem;
+  margin-top: 6.2rem;
   color: var(--darkbrown);
   border-bottom: 1px solid var(--darkbrown);
 }
 
-.testimoni .row .content .testi {
-  display: flex;
+.wrapper,
+.slide {
   width: 100%;
-  transition: 2s;
+  height: 100%;
 }
 
-.testimoni .row .content .wrapper {
-  width: 300px;
-  margin: auto;
-  border-radius: 5px;
-  overflow: hidden;
-}
-
-.testi img {
-  width: 100%;
-  min-width: 300px;
-  min-height: 280px;
-}
-#slide1:target ~ .testi {
-  margin-left: 0px;
-}
-
-#slide2:target ~ .testi {
-  margin-left: -100%;
-}
-
-#slide3:target ~ .testi {
-  margin-left: -200%;
-}
-
-#slide4:target ~ .testi {
-  margin-left: -300%;
-}
-
-.navigation a {
-  display: inline-block;
-  height: 15px;
-  width: 15px;
-  background-color: var(--brown);
-  font-size: 0px;
-  border-radius: 50%;
-}
-
-.navigation a:hover {
-  background-color: var(--darkbrown);
-  transition: 1s;
-}
-
-.navigation {
+.slide::before {
+  content: "";
   position: absolute;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-  text-align: center;
-  color: var(--brown);
-}
-
-.testimoni .row {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+  height: 100%;
   width: 100%;
-  justify-content: center;
-  align-items: center;
-  padding-top: 3rem;
+  z-index: 10;
 }
 
-.testimoni .row .content {
-  display: flex;
-  flex-wrap: wrap;
-  box-sizing: border-box;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  border-radius: 3%;
-  padding: 0;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-  transition: 0.3s;
-  width: 400px;
-  height: 420px;
+.slide .image {
+  height: 320px;
+  width: 320px;
+  object-fit: cover;
 }
 
-.testimoni .row .content:hover {
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  transform: translate(0px, -8px);
+/*swiper button css*/
+.nav-btn {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background: rgba(97, 74, 45, 0.3);
 }
 
+.nav-btn:hover {
+  background: rgba(97, 74, 45, 0.4);
+}
+
+.nav-btn::before,
+.nav-btn::after {
+  font-size: 25px;
+  color: var(--darkbrown);
+}
+
+.swiper-button-next {
+  right: 50px;
+}
+
+.swiper-button-prev {
+  left: 50px;
+}
+
+.swiper-pagination-bullet {
+  opacity: 1;
+  height: 20px;
+  width: 20px;
+  background-color: var(--brown);
+}
+
+.swiper-pagination-bullet-active {
+  border: 2px solid #ffffff;
+  background-color: var(--darkbrown);
+}
 /* Contact */
 .contact {
   padding: 7rem 7% 1.4rem;
