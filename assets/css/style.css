@@ -60,7 +60,7 @@ body {
   color: var(--darkbrown);
   display: inline-block;
   font-size: 2em;
-  margin: 0 2rem;
+  margin: 0 1.8rem;
 }
 
 .navbar .navbar-nav a:hover {
@@ -80,13 +80,10 @@ body {
   transform: scaleX(0.7);
 }
 
-.navbar .navbar-extra a{
+.navbar .navbar-extra a {
   color: var(--darkbrown);
   margin: 0 0.5 rem;
-
 }
-
-
 
 #menu-ham {
   display: none;
@@ -103,7 +100,7 @@ body {
   background-size: cover;
   background-position: center;
   position: relative;
-  text-align: center;
+  justify-content: center;
 }
 
 .hero::after {
@@ -121,9 +118,8 @@ body {
 }
 
 .hero .content {
-  min-width: 80rem;
   text-align: center;
-  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .hero .content h1 {
@@ -132,6 +128,8 @@ body {
   text-shadow: 1px 1px 3px rgba(98, 98, 102, 0.5);
   line-height: 1;
   text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero .content h1 span {
@@ -156,13 +154,8 @@ body {
 
 /* About Section*/
 .about {
-  padding: 8rem 7% 1.4rem;
+  padding: 8rem 1% 1rem;
   background-color: var(--bg);
-  background-image: url("../images/bg.ab.JPG");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  min-height: 100vh;
   width: 100%;
   position: relative;
 }
@@ -183,8 +176,13 @@ body {
 .about .row .content {
   flex: 1 1 25rem;
   padding: 0 1rem;
-  text-align: right;
-  text-align: right;
+}
+
+.about .row .content img {
+  width: 300px;
+  height: 350px;
+  align-items: center;
+  justify-items: center;
 }
 
 .about .row .content h3 {
@@ -192,8 +190,6 @@ body {
   font-size: 2rem;
   margin-bottom: 1rem;
   color: var(--darkbrown);
-  text-decoration-line: underline;
-  text-align: right;
   text-decoration-line: underline;
   text-align: right;
 }
@@ -208,12 +204,9 @@ body {
 
 .about .row .content p {
   font-size: 1.5em;
-  margin-bottom: 0.8rem;
   color: var(--brown);
   font-weight: 50;
-  line-height: 1.6;
-  padding-left: 30rem;
-  padding-left: 30rem;
+  text-align: right;
 }
 
 /* Menu Section */
@@ -262,7 +255,7 @@ body {
 
 .menu .gallery .row .product .content {
   /* width: 250px; */
-  width:20%;
+  width: 20%;
   margin: 1rem;
   box-sizing: border-box;
   float: left;
@@ -369,7 +362,6 @@ body {
 .nav-btn {
   height: 100px;
   width: 100px;
-
 }
 
 .nav-btn::before,
@@ -380,7 +372,7 @@ body {
 
 .swiper-button-next {
   right: 50px;
- padding-right: 3rem;
+  padding-right: 3rem;
 }
 
 .swiper-button-prev {
@@ -399,7 +391,6 @@ body {
   border: 2px solid #ffffff;
   background-color: var(--darkbrown);
 }
-
 
 /* Contact */
 .contact {
@@ -503,13 +494,48 @@ footer .credit a {
 
 /* Media */
 
+@media (max-width: 1080px) {
+  html {
+    font-size: 87%;
+  }
+  .navbar .navbar-logo {
+    font-size: 3rem;
+  }
+  .navbar .navbar-nav {
+    font-size: 87%;
+    position: relative;
+    top: auto;
+    left: auto;
+  }
+  .navbar .navbar-nav a {
+    position: relative;
+    margin: 0 1.2rem;
+  }
+
+  .hero .content h1 {
+    font-size: 3.3em;
+    margin-bottom: 1rem;
+  }
+
+  .about h2 {
+    font-size: 2.1rem;
+    text-align: right;
+    margin-bottom: 0.5rem;
+  }
+
+  .about .row .content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.3rem;
+  }
+  .about .row .content p {
+    font-size: 1.5em;
+    margin-bottom: 0.3rem;
+  }
+}
+
 /* Tablet */
 
 @media (max-width: 768px) {
-  html {
-    font-size: 62.5%;
-  }
-
   #menu-ham {
     display: inline-block;
   }
@@ -521,20 +547,19 @@ footer .credit a {
     background-color: var(--cream);
     width: 30rem;
     height: 100vh;
-    transition: 0.3s; 
+    transition: 0.3s;
   }
-  
+
   .navbar .navbar-nav a::after {
-    transform-origin: 0 0; 
+    transform-origin: 0 0;
   }
- 
+
   .navbar .navbar-nav a:hover::after {
     transform-origin: scaleX(0.2);
   }
 
   .navbar .navbar-nav.active {
     right: 0;
-
   }
   .navbar .navbar-nav a {
     color: var(--darkbrown);
@@ -545,9 +570,9 @@ footer .credit a {
   }
 
   .navbar .navbar-nav a::after {
-    transform-origin: 0 0; 
+    transform-origin: 0 0;
   }
- 
+
   .navbar .navbar-nav a:hover::after {
     transform-origin: scaleX(0.2);
   }
@@ -557,28 +582,85 @@ footer .credit a {
     text-align: center;
     align-items: center;
     justify-content: center;
-  
+  }
+  .hero .content h1 {
+    font-size: 2.5em;
+  }
+
+  .hero .content .cta {
+    font-size: 1.2rem;
+    padding: 0.8rem 2.5rem;
+  }
+
+  .about h2 {
+    font-size: 1.7rem;
+    text-align: right;
+  }
+
+  .about .row .content h3 {
+    font-size: 1.4rem;
+  }
+  .about .row .content p {
+    font-size: 1.4em;
+  }
+
+  .about .row .content img {
+    width: 230px;
+    height: 280px;
   }
 }
 
+/*
 .menu .gallery .row .product .content img {
   width: 75%;
   height: 75%;
-}
-
-
-
-
+} */
 
 /* HP */
-@media screen and (max-width: 450px) {
-   .hero .content {
-      font-size: 80%;
-
-    }
+@media (max-width: 450px) {
+  .hero .content h1 {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero .content h1 {
+    font-size: 2em;
   }
 
+  .hero .content .cta {
+    font-size: 1rem;
+    padding: 0.5rem 2rem;
+  }
 
+  .about .row {
+    display: contents;
+  }
+  .about h2 {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 0.1rem;
+  }
 
+  .about .row .content {
+    align-items: center;
+  }
+  .about .row .content img {
+    width: 150px;
+    height: 200px;
+    align-items: center;
+  }
 
-
+  .about .row .content h3 {
+    font-size: 1rem;
+    margin-bottom: 0.1rem;
+    margin-top: 0.5rem;
+    text-align: center;
+  }
+  .about .row .content p {
+    font-size: 1em;
+    margin-bottom: 0;
+    text-align: center;
+  }
+}
