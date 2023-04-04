@@ -445,9 +445,8 @@ body {
   padding-right: 5rem;
 }
 
-.contact .row .imagesqr {
+.contact .row img {
   width: 240px;
-  height: 240px;
 }
 /* Footer */
 footer {
@@ -607,6 +606,14 @@ footer .credit a {
     width: 230px;
     height: 280px;
   }
+
+  .contact .row img {
+    width: 180px;
+  }
+
+  .contact .row maps {
+    width: 180px;
+  }
 }
 
 /*
@@ -617,6 +624,8 @@ footer .credit a {
 
 /* HP */
 @media (max-width: 450px) {
+  .hero {
+  }
   .hero .content h1 {
     display: flex;
     flex-wrap: wrap;
