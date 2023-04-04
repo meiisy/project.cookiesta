@@ -397,7 +397,7 @@ body {
 .contact {
   padding: 7rem 7% 1.4rem;
 
-  background-color: var(--background);
+  background-color: var(--background) ;
 }
 .contact h2 {
   text-align: center;
@@ -445,8 +445,9 @@ body {
   margin: 2rem;
 }
 
-.contact .row img {
+.contact .row .imagesqr {
   width: 240px;
+  height: 240px;
 }
 /* Footer */
 footer {
