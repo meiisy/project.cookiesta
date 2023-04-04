@@ -1016,13 +1016,13 @@ footer .credit a {
     width: 200px;
   }
   .testimoni .swiper-button-next.nav-btn::after {
-    font-size: 25px;
-    padding-right: 2rem;
+    font-size: 20px;
+    padding-right: 1rem;
   }
 
   .testimoni .swiper-button-prev.nav-btn::after {
-    padding-left: 2rem;
-    font-size: 25px;
+    padding-left: 1rem;
+    font-size: 20px;
   }
 }
 
@@ -1045,13 +1045,13 @@ footer .credit a {
   }
 
   .testimoni .swiper-button-next.nav-btn::after {
-    font-size: 25px;
+    font-size: 18px;
     padding-right: 1rem;
   }
 
   .testimoni .swiper-button-prev.nav-btn::after {
     padding-left: 1rem;
-    font-size: 25px;
+    font-size: 18px;
   }
 
   .slide .image {
