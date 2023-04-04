@@ -366,14 +366,14 @@ body {
   color: var(--darkbrown);
 }
 
-.swiper-button-next {
-  right: 50px;
-  padding-right: 3rem;
+.testimoni .swiper-button-next.nav-btn::after {
+  font-size: 50px;
+  padding-right: 4rem;
 }
 
-.swiper-button-prev {
-  left: 50px;
-  padding-left: 3rem;
+.testimoni .swiper-button-prev.nav-btn::after {
+  padding-left: 4rem;
+  font-size: 50px;
 }
 
 .swiper-pagination-bullet {
@@ -600,6 +600,16 @@ footer .credit a {
     justify-content: center;
   }
 
+  .testimoni .swiper-button-next.nav-btn::after {
+    font-size: 45px;
+    padding-right: 4rem;
+  }
+
+  .testimoni .swiper-button-prev.nav-btn::after {
+    padding-left: 4rem;
+    font-size: 45px;
+  }
+
   .contact {
     padding: 5rem 7% 1.4rem;
   }
@@ -711,6 +721,7 @@ footer .credit a {
     background-position: center;
     position: relative;
     justify-content: center;
+    min-height: 70vh;
   }
 
   #menu-ham {
@@ -798,15 +809,83 @@ footer .credit a {
   }
 
   .contact .row .imagesqr {
-    width: 210px;
-    height: 210px;
+    width: 150px;
+    height: 150px;
+  }
+
+  .contact .row .map {
+    width: 22rem;
+    max-height: 10rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    min-height: 45vh;
+    background-image: url("../images/bg.hp.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    justify-content: center;
+  }
+  .hero .content h1 {
+    font-size: 2.1em;
+  }
+  .hero .content .cta {
+    font-size: 1.1rem;
+    padding: 0.8rem 2.2rem;
+  }
+
+  .menu .gallery .row .product .content {
+    width: 40%;
+  }
+
+  .contact .row {
+    flex-direction: column;
+  }
+
+  .contact .row .map {
+    width: 22rem;
+    max-height: 10rem;
+  }
+
+  .contact .row .imagesqr {
+    width: 12rem;
+    max-height: 14rem;
+  }
+
+  .about {
+    min-height: 80vh;
+  }
+
+  .about .row .content h3 {
+    font-size: 1.5rem;
+  }
+  .about .row .content p {
+    font-size: 1.2rem;
+  }
+
+  .testimoni {
+    min-height: 100vh;
+    padding: 4rem 7% 1.4rem;
+  }
+
+  .testimoni .swiper-button-next.nav-btn::after {
+    font-size: 40px;
+    padding-right: 3rem;
+  }
+
+  .testimoni .swiper-button-prev.nav-btn::after {
+    padding-left: 3rem;
+    font-size: 40px;
   }
 }
 
 /* HP */
 @media (max-width: 500px) {
   .hero {
-    min-height: 105vh;
+    min-height: 45vh;
     background-image: url("../images/bg.hp.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -886,10 +965,6 @@ footer .credit a {
     font-size: 2rem;
   }
 
-  .swiper-button-next {
-    padding-right: 2rem;
-  }
-
   .slide .image {
     height: 280px;
     width: 280px;
@@ -898,6 +973,17 @@ footer .credit a {
   .testimoni h2 {
     font-size: 2rem;
   }
+
+  .testimoni .swiper-button-next.nav-btn::after {
+    font-size: 30px;
+    padding-right: 2rem;
+  }
+
+  .testimoni .swiper-button-prev.nav-btn::after {
+    padding-left: 2rem;
+    font-size: 30px;
+  }
+
   .contact {
     padding: 6rem 7% 1.4rem;
   }
@@ -922,14 +1008,27 @@ footer .credit a {
 
 @media (max-width: 450px) {
   .hero {
-    min-height: 70vh;
+    min-height: 50vh;
     background-image: url("../images/bg.450.png");
+  }
+  .slide .image {
+    height: 200px;
+    width: 200px;
+  }
+  .testimoni .swiper-button-next.nav-btn::after {
+    font-size: 25px;
+    padding-right: 2rem;
+  }
+
+  .testimoni .swiper-button-prev.nav-btn::after {
+    padding-left: 2rem;
+    font-size: 25px;
   }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 360px) {
   .hero {
-    min-height: 70vh;
+    min-height: 60vh;
     background-image: url("../images/bg.350.png");
   }
 
@@ -937,9 +1036,27 @@ footer .credit a {
     font-size: 1.8em;
   }
 
+  .about h2 {
+    font-size: 1.2rem;
+  }
+
+  .testimoni {
+    min-height: 40vh;
+  }
+
+  .testimoni .swiper-button-next.nav-btn::after {
+    font-size: 25px;
+    padding-right: 1rem;
+  }
+
+  .testimoni .swiper-button-prev.nav-btn::after {
+    padding-left: 1rem;
+    font-size: 25px;
+  }
+
   .slide .image {
-    height: 250px;
-    width: 250px;
+    height: 170px;
+    width: 170px;
   }
 
   .contact .row .map {
