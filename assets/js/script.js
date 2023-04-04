@@ -6,6 +6,13 @@ document.querySelector('#menu-ham').onclick = () => {
    navbarNav.classList.toggle('active');
 };
 
+document
+    .getElementById("menu-ham")
+    .addEventListener("click", function (event) {
+        event.preventDefault();
+        //kode lainnya untuk menampilkan menu
+    });
+
 // klik diluar slidebar untuk menghilangkan nav//
 const menuham = document.querySelector ('#menu-ham');
 

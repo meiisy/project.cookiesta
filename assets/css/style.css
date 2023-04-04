@@ -5,6 +5,7 @@
   --cream: #f0cd9e;
   --skin: #ffedde;
   --darkbrown: rgb(109, 75, 52);
+  --background: #fff9ee;
 }
 
 @font-face {
@@ -26,9 +27,13 @@
   text-decoration: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Caveat Brush", cursive;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--background);
   color: rgb(0, 0, 0);
   min-height: 4500px;
 }
@@ -83,6 +88,8 @@ body {
 .navbar .navbar-extra a {
   color: var(--darkbrown);
   margin: 0 0.5 rem;
+  transition: 0.3s ease-in-out;
+  display: none;
 }
 
 #menu-ham {
@@ -93,6 +100,7 @@ body {
 .hero {
   min-height: 120vh;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   background-image: url("../images/bg2.png");
   background-repeat: no-repeat;
@@ -159,21 +167,11 @@ body {
   position: relative;
 }
 
-.about h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  color: var(--darkbrown);
-  text-decoration-line: underline;
-  text-align: right;
-}
-
 .about .row {
   display: flex;
 }
 
 .about .row .content {
-  flex: 1 1 25rem;
   padding: 0 1rem;
 }
 
@@ -211,7 +209,6 @@ body {
 /* Menu Section */
 .menu {
   padding: 8rem 7% 1.4rem;
-  background-image: url("../images/menu2.png");
   background-image: url("../images/menu2.png");
 }
 
@@ -272,8 +269,8 @@ body {
 }
 
 .menu .gallery .row .product .content img {
-  width: 200px;
-  height: 200px;
+  width: 80%;
+  height: 70%;
   border-radius: 10%;
   text-align: center;
   margin: 0 auto;
@@ -295,7 +292,6 @@ body {
   margin: 0;
   font-family: fontmenu;
   padding: 0 10px;
-  word-break: break-all;
 }
 
 .menu .gallery .row .product .content .button {
@@ -324,6 +320,7 @@ body {
   background-color: var(--bg);
 }
 .testimoni h2 {
+  padding: 1rem;
   text-align: center;
   font-size: 3rem;
   margin-bottom: 1rem;
@@ -394,8 +391,8 @@ body {
 /* Contact */
 .contact {
   padding: 7rem 7% 1.4rem;
-  background-image: url("../images/cont.png");
-  color: var(--darkbrown);
+
+  background-color: var(--background);
 }
 .contact h2 {
   text-align: center;
@@ -435,14 +432,12 @@ body {
 
 .contact .row .map {
   flex: 0.5 0.5 25rem;
-  width: 25rem;
+  width: 30rem;
+  height: 18rem;
   object-fit: cover;
-  min-height: 18rem;
   border: 2px solid var(--darkbrown);
   box-sizing: border-box;
   margin: 2rem;
-  padding-left: 2rem;
-  padding-right: 5rem;
 }
 
 .contact .row img {
@@ -492,24 +487,177 @@ footer .credit a {
 
 /* Media */
 
-@media (max-width: 1080px) {
-  html {
-    font-size: 87%;
+@media (max-width: 1100px) {
+  .navbar .navbar-nav a {
+    color: var(--darkbrown);
+    display: inline-block;
+    font-size: 1.7em;
+    margin: 0 1.8rem;
   }
+
+  .hero {
+    background-image: url("../images/bg.1100.png");
+    min-height: 50vh;
+  }
+
+  .about .row .content {
+    padding: 0 1rem;
+  }
+
+  .about .row .content img {
+    width: 300px;
+    height: 350px;
+  }
+
+  .about .row .content h3 {
+    margin-top: 2rem;
+    font-size: 2rem;
+  }
+
+  .testimoni {
+    min-height: 50vh;
+  }
+
+  .testimoni h2 {
+    padding: 1rem 5% 0.6rem;
+  }
+
+  .slide .image {
+    height: 290px;
+    width: 300px;
+  }
+
+  .hero .content h1 {
+    font-size: 3.2em;
+  }
+}
+
+@media (max-width: 900px) {
+  .navbar .navbar-nav a {
+    color: var(--darkbrown);
+    margin: 1rem;
+    padding: 0.2rem;
+    font-size: 1.5rem;
+  }
+
   .navbar .navbar-logo {
     font-size: 3rem;
   }
-  .navbar .navbar-nav {
-    font-size: 87%;
-    position: relative;
-    top: auto;
-    left: auto;
-  }
-  .navbar .navbar-nav a {
-    position: relative;
-    margin: 0 1.2rem;
+
+  .hero {
+    min-height: 45vh;
   }
 
+  .hero .content h1 {
+    font-size: 3em;
+  }
+
+  .hero .content .cta {
+    font-size: 1.2rem;
+  }
+
+  .about h2 {
+    font-size: 1.7rem;
+  }
+
+  .about .row .content h3 {
+    font-size: 1.7rem;
+  }
+
+  .about .row .content p {
+    font-size: 1.2em;
+  }
+
+  .about {
+    padding: 6rem 1% 1rem;
+  }
+
+  .menu h2 {
+    font-size: 2rem;
+  }
+
+  .menu .gallery .row h4 {
+    font-size: 2rem;
+  }
+
+  .menu .gallery .row .product .content {
+    width: 35%;
+  }
+
+  .testimoni {
+    min-height: 50vh;
+  }
+
+  .testimoni h2 {
+    font-size: 2rem;
+  }
+  .slide .image {
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .contact {
+    padding: 5rem 7% 1.4rem;
+  }
+
+  .contact h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 820px) {
+  .hero {
+    background-image: url("../images/bg.820.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    justify-content: center;
+  }
+
+  html {
+    font-size: 87%;
+  }
+
+  #menu-ham {
+    display: inline-block;
+  }
+
+  .navbar .navbar-logo {
+    font-size: 3rem;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    width: 20rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+    background-color: var(--cream);
+  }
+
+  .navbar .navbar-nav a {
+    color: var(--darkbrown);
+    display: block;
+    margin: 1rem;
+    font-size: rem;
+  }
+
+  .navbar .navbar-nav a::after {
+    border-bottom: none;
+  }
+  .hero {
+    min-height: 50vh;
+  }
   .hero .content h1 {
     font-size: 3.3em;
     margin-bottom: 1rem;
@@ -529,11 +677,42 @@ footer .credit a {
     font-size: 1.5em;
     margin-bottom: 0.3rem;
   }
+
+  .testimoni {
+    min-height: 45vh;
+  }
+
+  .slide .image {
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .menu .gallery .row .product {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu .gallery .row .product .content {
+    width: 30%;
+  }
 }
 
 /* Tablet */
 
 @media (max-width: 768px) {
+  .hero {
+    background-image: url("../images/tb.768.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    justify-content: center;
+  }
+
   #menu-ham {
     display: inline-block;
   }
@@ -543,7 +722,7 @@ footer .credit a {
     top: 100%;
     right: -100%;
     background-color: var(--cream);
-    width: 30rem;
+    width: 15rem;
     height: 100vh;
     transition: 0.3s;
   }
@@ -562,9 +741,9 @@ footer .credit a {
   .navbar .navbar-nav a {
     color: var(--darkbrown);
     display: block;
-    margin: 1.5rem;
-    padding: 0.5rem;
-    font-size: 2rem;
+    margin: 1rem;
+    padding: 0.2rem;
+    font-size: 1.5rem;
   }
 
   .navbar .navbar-nav a::after {
@@ -584,7 +763,9 @@ footer .credit a {
   .hero .content h1 {
     font-size: 2.5em;
   }
-
+  .hero {
+    min-height: 60vh;
+  }
   .hero .content .cta {
     font-size: 1.2rem;
     padding: 0.8rem 2.5rem;
@@ -607,25 +788,33 @@ footer .credit a {
     height: 280px;
   }
 
-  .contact .row img {
-    width: 180px;
+  .about {
+    min-height: 45vh;
+    padding: 6rem 1% 1rem;
   }
 
-  .contact .row maps {
-    width: 180px;
+  .testimoni {
+    min-height: 55vh;
+  }
+
+  .contact .row .imagesqr {
+    width: 210px;
+    height: 210px;
   }
 }
 
-/*
-.menu .gallery .row .product .content img {
-  width: 75%;
-  height: 75%;
-} */
-
 /* HP */
-@media (max-width: 450px) {
+@media (max-width: 500px) {
   .hero {
+    min-height: 105vh;
+    background-image: url("../images/bg.hp.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    justify-content: center;
   }
+
   .hero .content h1 {
     display: flex;
     flex-wrap: wrap;
@@ -633,6 +822,7 @@ footer .credit a {
     align-items: center;
     justify-content: center;
   }
+
   .hero .content h1 {
     font-size: 2em;
   }
@@ -643,21 +833,20 @@ footer .credit a {
   }
 
   .about .row {
-    display: contents;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
+
   .about h2 {
     font-size: 1.2rem;
     text-align: center;
     margin-bottom: 0.1rem;
   }
 
-  .about .row .content {
-    align-items: center;
-  }
   .about .row .content img {
     width: 150px;
     height: 200px;
-    align-items: center;
   }
 
   .about .row .content h3 {
@@ -666,9 +855,95 @@ footer .credit a {
     margin-top: 0.5rem;
     text-align: center;
   }
+
   .about .row .content p {
     font-size: 1em;
     margin-bottom: 0;
     text-align: center;
+  }
+
+  .menu {
+    background-image: url("../images/bg.500.png");
+  }
+
+  .menu .gallery .row .product {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu .gallery .row .product .content {
+    width: 60%;
+  }
+
+  .menu h2 {
+    font-size: 2rem;
+  }
+  .menu {
+    padding: 6rem 7% 1.4rem;
+  }
+
+  .menu .gallery .row h4 {
+    font-size: 2rem;
+  }
+
+  .swiper-button-next {
+    padding-right: 2rem;
+  }
+
+  .slide .image {
+    height: 280px;
+    width: 280px;
+  }
+
+  .testimoni h2 {
+    font-size: 2rem;
+  }
+  .contact {
+    padding: 6rem 7% 1.4rem;
+  }
+  .contact h2 {
+    font-size: 2rem;
+  }
+
+  .contact .row {
+    flex-direction: column;
+  }
+
+  .contact .row .map {
+    width: 22rem;
+    max-height: 12rem;
+  }
+
+  .contact .row .imagesqr {
+    width: 12rem;
+    max-height: 14rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .hero {
+    min-height: 70vh;
+    background-image: url("../images/bg.450.png");
+  }
+}
+
+@media (max-width: 350px) {
+  .hero {
+    min-height: 70vh;
+    background-image: url("../images/bg.350.png");
+  }
+
+  .hero .content h1 {
+    font-size: 1.8em;
+  }
+
+  .slide .image {
+    height: 250px;
+    width: 250px;
+  }
+
+  .contact .row .map {
+    width: 19rem;
+    max-height: 12rem;
   }
 }
