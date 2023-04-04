@@ -18,6 +18,11 @@
   src: url(../font/EduNSWACTFoundation-VariableFont_wght.ttf);
 }
 
+@font-face {
+  font-family: allfont;
+  src: url(../font/CaveatBrush-Regular.ttf);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -32,7 +37,7 @@ html {
 }
 
 body {
-  font-family: "Caveat Brush", cursive;
+  font-family: allfont;
   background-color: var(--background);
   color: rgb(0, 0, 0);
   min-height: 4500px;
