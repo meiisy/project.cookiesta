@@ -502,7 +502,7 @@ footer .credit a {
   }
 
   .hero {
-    background-image: url("../images/bg.1100.png");
+    background-image: url("../images/bg.1100.jpeg");
     min-height: 50vh;
   }
 
@@ -627,7 +627,7 @@ footer .credit a {
 
 @media (max-width: 820px) {
   .hero {
-    background-image: url("../images/bg.820.png");
+    background-image: url("../images/bg.820.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -721,7 +721,7 @@ footer .credit a {
 
 @media (max-width: 768px) {
   .hero {
-    background-image: url("../images/tb.768.png");
+    background-image: url("../images/tb.768.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -827,8 +827,8 @@ footer .credit a {
 
 @media (max-width: 600px) {
   .hero {
-    min-height: 45vh;
-    background-image: url("../images/bg.hp.png");
+    min-height: 60vh;
+    background-image: url("../images/tb.768.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -845,6 +845,10 @@ footer .credit a {
 
   .menu .gallery .row .product .content {
     width: 40%;
+  }
+
+  .menu {
+    background-image: url("../images/menu1.png");
   }
 
   .contact .row {
@@ -892,7 +896,7 @@ footer .credit a {
 @media (max-width: 500px) {
   .hero {
     min-height: 45vh;
-    background-image: url("../images/bg.hp.png");
+    background-image: url("../images/tb.768.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -948,8 +952,9 @@ footer .credit a {
   }
 
   .menu {
-    background-image: url("../images/bg.500.png");
+    background-image: none;
   }
+
 
   .menu .gallery .row .product {
     align-items: center;
@@ -1014,9 +1019,18 @@ footer .credit a {
 
 @media (max-width: 450px) {
   .hero {
-    min-height: 50vh;
-    background-image: url("../images/bg.450.png");
+    min-height: 60vh;
+    background-image: url("../images/bg.450.jpg");
   }
+
+  .about {
+    min-height: 50vh;
+  }
+
+  .testimoni {
+    min-height: 40vh;
+  }
+
   .slide .image {
     height: 200px;
     width: 200px;
@@ -1030,12 +1044,17 @@ footer .credit a {
     padding-left: 1rem;
     font-size: 20px;
   }
+
+  .menu {
+    background-image: none;
+    
+  }
 }
 
 @media (max-width: 360px) {
   .hero {
-    min-height: 60vh;
-    background-image: url("../images/bg.350.png");
+    min-height: 76vh;
+    background-image: url("../images/bg.hpp.jpeg");
   }
 
   .hero .content h1 {
@@ -1044,6 +1063,10 @@ footer .credit a {
 
   .about h2 {
     font-size: 1.2rem;
+  }
+
+  .menu {
+    background-image: none;
   }
 
   .testimoni {
@@ -1069,4 +1092,5 @@ footer .credit a {
     width: 19rem;
     max-height: 12rem;
   }
+
 }
